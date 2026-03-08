@@ -20,7 +20,7 @@ This tool autonomously extracts all Azure RBAC role assignments across a subscri
 
 *Watch the full walkthrough of the IAM Policy Auditor in action:*
 
-[![Demo Video](https://img.shields.io/badge/▶_Watch_Demo-YouTube-FF0000?style=for-the-badge&logo=youtube)](YOUR_YOUTUBE_LINK_HERE)
+[![Demo Video](https://img.shields.io/badge/▶_Watch_Demo-YouTube-FF0000?style=for-the-badge&logo=youtube)](https://youtu.be/jdFuR9TP0UU)
 
 
 # Architecture Diagram
