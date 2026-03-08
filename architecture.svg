@@ -1,0 +1,160 @@
+<svg width="900" height="580" viewBox="0 0 900 580" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020810"/>
+      <stop offset="100%" style="stop-color:#0D1117"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#00FFCC" opacity="0.7"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#FF4444" opacity="0.7"/>
+    </marker>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" fill="url(#bg)"/>
+  <!-- Grid -->
+  <g opacity="0.03" stroke="#00FFCC" stroke-width="0.5">
+    <line x1="0" y1="60" x2="900" y2="60"/> <line x1="0" y1="120" x2="900" y2="120"/>
+    <line x1="0" y1="180" x2="900" y2="180"/> <line x1="0" y1="240" x2="900" y2="240"/>
+    <line x1="0" y1="300" x2="900" y2="300"/> <line x1="0" y1="360" x2="900" y2="360"/>
+    <line x1="0" y1="420" x2="900" y2="420"/> <line x1="0" y1="480" x2="900" y2="480"/>
+    <line x1="0" y1="540" x2="900" y2="540"/>
+    <line x1="90" y1="0" x2="90" y2="580"/> <line x1="180" y1="0" x2="180" y2="580"/>
+    <line x1="270" y1="0" x2="270" y2="580"/> <line x1="360" y1="0" x2="360" y2="580"/>
+    <line x1="450" y1="0" x2="450" y2="580"/> <line x1="540" y1="0" x2="540" y2="580"/>
+    <line x1="630" y1="0" x2="630" y2="580"/> <line x1="720" y1="0" x2="720" y2="580"/>
+    <line x1="810" y1="0" x2="810" y2="580"/>
+  </g>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF" filter="url(#glow)">IAM Policy Auditor — Architecture</text>
+  <text x="450" y="56" text-anchor="middle" font-size="11" fill="#8B949E" letter-spacing="2">Azure RBAC · Least Privilege · MITRE ATT&amp;CK</text>
+  <line x1="200" y1="63" x2="700" y2="63" stroke="#00FFCC" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- ── LAYER 1: INPUT SOURCES ─────────────────────────────────── -->
+  <text x="450" y="90" text-anchor="middle" font-size="10" fill="#8B949E" letter-spacing="3">INPUT SOURCES</text>
+
+  <!-- Azure RBAC -->
+  <rect x="60" y="100" width="130" height="60" rx="6" fill="#0D1117" stroke="#0089D6" stroke-width="1.5"/>
+  <text x="125" y="124" text-anchor="middle" font-size="11" font-weight="600" fill="#58A6FF">☁ Azure RBAC</text>
+  <text x="125" y="140" text-anchor="middle" font-size="9" fill="#8B949E">Role Assignments</text>
+  <text x="125" y="153" text-anchor="middle" font-size="9" fill="#8B949E">az mgmt authorization</text>
+
+  <!-- Service Principals -->
+  <rect x="210" y="100" width="130" height="60" rx="6" fill="#0D1117" stroke="#BC8CFF" stroke-width="1.5"/>
+  <text x="275" y="124" text-anchor="middle" font-size="11" font-weight="600" fill="#BC8CFF">⚙ Service Principals</text>
+  <text x="275" y="140" text-anchor="middle" font-size="9" fill="#8B949E">SP + Secret Expiry</text>
+  <text x="275" y="153" text-anchor="middle" font-size="9" fill="#8B949E">Azure AD Graph API</text>
+
+  <!-- Managed Identities -->
+  <rect x="360" y="100" width="130" height="60" rx="6" fill="#0D1117" stroke="#00FFCC" stroke-width="1.5"/>
+  <text x="425" y="124" text-anchor="middle" font-size="11" font-weight="600" fill="#00FFCC">🔑 Managed Identities</text>
+  <text x="425" y="140" text-anchor="middle" font-size="9" fill="#8B949E">System + User Assigned</text>
+  <text x="425" y="153" text-anchor="middle" font-size="9" fill="#8B949E">azure-identity SDK</text>
+
+  <!-- Guest Accounts -->
+  <rect x="510" y="100" width="130" height="60" rx="6" fill="#0D1117" stroke="#FF8C00" stroke-width="1.5"/>
+  <text x="575" y="124" text-anchor="middle" font-size="11" font-weight="600" fill="#FF8C00">👥 Guest Accounts</text>
+  <text x="575" y="140" text-anchor="middle" font-size="9" fill="#8B949E">External Identities</text>
+  <text x="575" y="153" text-anchor="middle" font-size="9" fill="#8B949E">B2B / #EXT# accounts</text>
+
+  <!-- Demo Mode -->
+  <rect x="660" y="100" width="130" height="60" rx="6" fill="#0D1117" stroke="#3FB950" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="725" y="124" text-anchor="middle" font-size="11" font-weight="600" fill="#3FB950">🧪 Demo Mode</text>
+  <text x="725" y="140" text-anchor="middle" font-size="9" fill="#8B949E">Mock IAM Generator</text>
+  <text x="725" y="153" text-anchor="middle" font-size="9" fill="#8B949E">No Azure needed</text>
+
+  <!-- Arrows to RBAC Scanner -->
+  <line x1="125" y1="160" x2="125" y2="215" stroke="#00FFCC" stroke-width="1" opacity="0.5" marker-end="url(#arrow)"/>
+  <line x1="275" y1="160" x2="230" y2="215" stroke="#00FFCC" stroke-width="1" opacity="0.5" marker-end="url(#arrow)"/>
+  <line x1="425" y1="160" x2="360" y2="215" stroke="#00FFCC" stroke-width="1" opacity="0.5" marker-end="url(#arrow)"/>
+  <line x1="575" y1="160" x2="490" y2="215" stroke="#00FFCC" stroke-width="1" opacity="0.5" marker-end="url(#arrow)"/>
+  <line x1="725" y1="160" x2="620" y2="215" stroke="#3FB950" stroke-width="1" opacity="0.5" stroke-dasharray="4,2" marker-end="url(#arrow)"/>
+
+  <!-- ── LAYER 2: RBAC SCANNER ──────────────────────────────────── -->
+  <text x="450" y="210" text-anchor="middle" font-size="10" fill="#8B949E" letter-spacing="3">COLLECTION</text>
+  <rect x="200" y="220" width="460" height="55" rx="8" fill="#161B22" stroke="#0089D6" stroke-width="2"/>
+  <text x="430" y="244" text-anchor="middle" font-size="13" font-weight="700" fill="#58A6FF">🔍 RBAC Scanner</text>
+  <text x="430" y="261" text-anchor="middle" font-size="10" fill="#8B949E">rbac_scanner.py · Collects all role assignments · Normalises principal types · Resolves scope hierarchy</text>
+
+  <!-- Arrow down -->
+  <line x1="430" y1="275" x2="430" y2="310" stroke="#00FFCC" stroke-width="1.5" opacity="0.6" marker-end="url(#arrow)"/>
+
+  <!-- ── LAYER 3: RISK ENGINE ───────────────────────────────────── -->
+  <text x="450" y="307" text-anchor="middle" font-size="10" fill="#8B949E" letter-spacing="3">ANALYSIS</text>
+  <rect x="100" y="315" width="660" height="95" rx="8" fill="#1C2333" stroke="#FF4444" stroke-width="2"/>
+  <text x="430" y="336" text-anchor="middle" font-size="13" font-weight="700" fill="#FF6B6B">⚡ Risk Engine</text>
+  <text x="430" y="351" text-anchor="middle" font-size="10" fill="#8B949E">risk_engine.py · 7 detection rules · MITRE ATT&amp;CK mapping · Security Score (0–100) · Remediation CLI generation</text>
+
+  <!-- 7 finding boxes inside risk engine -->
+  <rect x="115" y="358" width="80" height="42" rx="4" fill="#0D1117" stroke="#FF4444" stroke-width="1"/>
+  <text x="155" y="374" text-anchor="middle" font-size="8" fill="#FF4444" font-weight="600">Over-Privileged</text>
+  <text x="155" y="386" text-anchor="middle" font-size="8" fill="#8B949E">T1078</text>
+  <text x="155" y="396" text-anchor="middle" font-size="7" fill="#8B949E">Privilege Esc.</text>
+
+  <rect x="205" y="358" width="80" height="42" rx="4" fill="#0D1117" stroke="#FF4444" stroke-width="1"/>
+  <text x="245" y="374" text-anchor="middle" font-size="8" fill="#FF4444" font-weight="600">Guest Privileged</text>
+  <text x="245" y="386" text-anchor="middle" font-size="8" fill="#8B949E">T1078.004</text>
+  <text x="245" y="396" text-anchor="middle" font-size="7" fill="#8B949E">Initial Access</text>
+
+  <rect x="295" y="358" width="80" height="42" rx="4" fill="#0D1117" stroke="#FF4444" stroke-width="1"/>
+  <text x="335" y="374" text-anchor="middle" font-size="8" fill="#FF4444" font-weight="600">SP Owner</text>
+  <text x="335" y="386" text-anchor="middle" font-size="8" fill="#8B949E">T1552.001</text>
+  <text x="335" y="396" text-anchor="middle" font-size="7" fill="#8B949E">Cred. Access</text>
+
+  <rect x="385" y="358" width="80" height="42" rx="4" fill="#0D1117" stroke="#FF8C00" stroke-width="1"/>
+  <text x="425" y="374" text-anchor="middle" font-size="8" fill="#FF8C00" font-weight="600">Sub-Scope</text>
+  <text x="425" y="386" text-anchor="middle" font-size="8" fill="#8B949E">T1098</text>
+  <text x="425" y="396" text-anchor="middle" font-size="7" fill="#8B949E">Persistence</text>
+
+  <rect x="475" y="358" width="80" height="42" rx="4" fill="#0D1117" stroke="#FF8C00" stroke-width="1"/>
+  <text x="515" y="374" text-anchor="middle" font-size="8" fill="#FF8C00" font-weight="600">Stale Account</text>
+  <text x="515" y="386" text-anchor="middle" font-size="8" fill="#8B949E">T1078.004</text>
+  <text x="515" y="396" text-anchor="middle" font-size="7" fill="#8B949E">Defense Evasion</text>
+
+  <rect x="565" y="358" width="80" height="42" rx="4" fill="#0D1117" stroke="#E3B341" stroke-width="1"/>
+  <text x="605" y="374" text-anchor="middle" font-size="8" fill="#E3B341" font-weight="600">MFA Missing</text>
+  <text x="605" y="386" text-anchor="middle" font-size="8" fill="#8B949E">T1556</text>
+  <text x="605" y="396" text-anchor="middle" font-size="7" fill="#8B949E">Cred. Access</text>
+
+  <rect x="655" y="358" width="90" height="42" rx="4" fill="#0D1117" stroke="#E3B341" stroke-width="1"/>
+  <text x="700" y="374" text-anchor="middle" font-size="8" fill="#E3B341" font-weight="600">Expired Secret</text>
+  <text x="700" y="386" text-anchor="middle" font-size="8" fill="#8B949E">T1552.004</text>
+  <text x="700" y="396" text-anchor="middle" font-size="7" fill="#8B949E">Cred. Access</text>
+
+  <!-- Arrows from Risk Engine -->
+  <line x1="300" y1="410" x2="200" y2="455" stroke="#00FFCC" stroke-width="1.5" opacity="0.5" marker-end="url(#arrow)"/>
+  <line x1="430" y1="410" x2="430" y2="455" stroke="#00FFCC" stroke-width="1.5" opacity="0.5" marker-end="url(#arrow)"/>
+  <line x1="560" y1="410" x2="660" y2="455" stroke="#00FFCC" stroke-width="1.5" opacity="0.5" marker-end="url(#arrow)"/>
+
+  <!-- ── LAYER 4: OUTPUTS ───────────────────────────────────────── -->
+  <text x="450" y="452" text-anchor="middle" font-size="10" fill="#8B949E" letter-spacing="3">OUTPUT</text>
+
+  <!-- Streamlit Dashboard -->
+  <rect x="60" y="460" width="260" height="60" rx="6" fill="#0D1117" stroke="#00FFCC" stroke-width="1.5"/>
+  <text x="190" y="483" text-anchor="middle" font-size="12" font-weight="600" fill="#00FFCC">📊 Streamlit Dashboard</text>
+  <text x="190" y="498" text-anchor="middle" font-size="9" fill="#8B949E">Findings · Remediation CLI · Analytics</text>
+  <text x="190" y="511" text-anchor="middle" font-size="9" fill="#8B949E">IAM Security Score · Principal Table</text>
+
+  <!-- Audit History -->
+  <rect x="340" y="460" width="200" height="60" rx="6" fill="#0D1117" stroke="#E3B341" stroke-width="1.5"/>
+  <text x="440" y="483" text-anchor="middle" font-size="12" font-weight="600" fill="#E3B341">🗄 Audit History</text>
+  <text x="440" y="498" text-anchor="middle" font-size="9" fill="#8B949E">SQLite persistent storage</text>
+  <text x="440" y="511" text-anchor="middle" font-size="9" fill="#8B949E">Track score over time</text>
+
+  <!-- Export -->
+  <rect x="560" y="460" width="260" height="60" rx="6" fill="#0D1117" stroke="#BC8CFF" stroke-width="1.5"/>
+  <text x="690" y="483" text-anchor="middle" font-size="12" font-weight="600" fill="#BC8CFF">📤 Export</text>
+  <text x="690" y="498" text-anchor="middle" font-size="9" fill="#8B949E">PDF Report · CSV · JSON</text>
+  <text x="690" y="511" text-anchor="middle" font-size="9" fill="#8B949E">SIEM / SOAR Integration</text>
+
+  <!-- Bottom bar -->
+  <line x1="0" y1="555" x2="900" y2="555" stroke="#30363D" stroke-width="0.5"/>
+  <text x="450" y="572" text-anchor="middle" font-size="10" fill="#8B949E">Built by Sushanth Banuka · github.com/Sushanth-Banuka · Python · Streamlit · Azure SDK · Plotly · SQLite</text>
+</svg>
