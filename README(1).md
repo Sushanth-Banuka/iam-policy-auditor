@@ -176,9 +176,9 @@ This tool demonstrates the IAM audit component of cloud security posture managem
 
 > AUTONOMOUS CLOUD SECURITY POSTURE MANAGEMENT (ACSPM): An Event Driven Framwork For Real Time Misconfiguration Remedation
 > 
-> Mr.Sushanth Banuka 
+> Mr. Sushanth Banuka 
 >
-> (https://ijnrd.org/papers/IJNRD2603361.pdf)
+> https://ijnrd.org/papers/IJNRD2603361.pdf
 
 
 # Related Projects
