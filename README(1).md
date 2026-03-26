@@ -174,10 +174,11 @@ Then click **▶ Run Audit** to scan your live Azure tenant.
 
 This tool demonstrates the IAM audit component of cloud security posture management, complementing the following research:
 
-> **"Autonomous Cloud Security Posture Management (CSPM): An Event-Driven Framework for Real-Time Misconfiguration Remediation"**
-> Sushanth Banuka — Malla Reddy University, Hyderabad, 2026
+> AUTONOMOUS CLOUD SECURITY POSTURE MANAGEMENT (ACSPM): An Event Driven Framwork For Real Time Misconfiguration Remedation
+> 
+> Mr.Sushanth Banuka 
 >
-> *[Link to published paper — placeholder]*
+> (https://ijnrd.org/papers/IJNRD2603361.pdf)
 
 
 # Related Projects
